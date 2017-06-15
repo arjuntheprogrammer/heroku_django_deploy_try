@@ -1,0 +1,29 @@
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh //download and install heroku cli
+
+heroku --version
+
+heroku login
+
+mkdir myapp
+
+cd myapp
+
+heroku create
+
+django-admin startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile  myproject
+
+source ../virenv/bin/activate
+
+sudo apt-get install postgresql
+sudo apt-get install python-psycopg2
+sudo apt-get install libpq-dev
+pip install -r requirements.txt 
+
+heroku local web //to run locallly
+
+
+git add .
+git commit -m "Added a Procfile."
+heroku login
+heroku create
+git push heroku master
