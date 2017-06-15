@@ -1,0 +1,70 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- web site title -->
+        <title>{% block title %}{% endblock title %} - Heroku Deploy</title>
+
+        <!-- favicon -->
+        <link rel="icon" href="{% static "images/favicon.png" %}">
+
+        <!-- style -->
+        <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link rel="stylesheet" href="{% static "css/custom.css" %}">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js" %}"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js" %}"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+      <div class="wrapper">
+
+        {% include "header.html" %}
+
+        {% block content %}
+        {% endblock content %}
+
+        {% include "footer.html" %}
+
+      </div>
+
+    <!-- jQuery libery -->
+    <script src="{% static "js/vendor/jquery-1.12.4.min.js" %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static "js/vendor/bootstrap.min.js" %}"></script>
+    <!-- jQuery Ui -->
+    <script src="{% static "js/jquery-ui-min.js" %}"></script>
+    <!-- Owl -->
+    <script src="{% static "js/owl.carousel.min.js" %}"></script>
+    <!-- Downcount -->
+    <script src="{% static "js/jquery.downCount.js" %}"></script>
+    <!-- Bootsnav -->
+    <script src="{% static "js/bootsnav.js" %}"></script>
+    <!-- Isotope -->
+    <script src="{% static "js/isotope.pkgd.min.js" %}"></script>
+    <!-- prettyphoto -->
+    <script src="{% static "js/jquery.prettyPhoto.js" %}"></script>
+    <!-- tweetie -->
+    <script src="{% static "scripts/Tweetie/tweetie.min.js" %}"></script>
+    <!-- appear -->
+    <script src="{% static "js/jquery.appear.js" %}"></script>
+    <!-- waypoint -->
+    <script src="{% static "js/waypoints.min.js" %}"></script>
+    <!-- progress bar -->
+    <script src="{% static "js/jQuery-plugin-progressbar.js" %}"></script>
+    <!-- V carousel -->
+    <script src="{% static "js/v.carousel.js" %}"></script>
+    <!-- custom -->
+    <script src="{% static "js/custom.js" %}"></script>
+    <!-- facebook like js -->
+</body>
+</html>
