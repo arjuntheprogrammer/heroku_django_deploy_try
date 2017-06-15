@@ -1,13 +1,5 @@
 # Heroku Django Starter Template
 
-An utterly fantastic project starter template for Django 1.11.
-
-## Features
-
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment. 
-
 ## How to Use
 
 To use this project, follow these steps:
@@ -37,15 +29,37 @@ You can replace ``helloworld`` with your desired project name.
 
     $ heroku run python manage.py migrate
 
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
+## My helping commands
+    wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh //download and install heroku cli
 
-## Using Python 2.7?
+    heroku --version
 
-Just update `runtime.txt` to `python-2.7.13` (no trailing spaces or newlines!).
+    heroku login
+
+    mkdir myapp
+
+    cd myapp
+
+    heroku create
+
+    django-admin startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile  myproject
+
+    source ../virenv/bin/activate
+
+    sudo apt-get install postgresql
+    sudo apt-get install python-psycopg2
+    sudo apt-get install libpq-dev
+    pip install -r requirements.txt 
+
+    heroku local web //to run locallly
 
 
-## License: MIT
-
+    git add .
+    git commit -m "Added a Procfile."
+    heroku login
+    heroku create
+    git push heroku master
+    
 ## Further Reading
 
 - [Gunicorn](https://warehouse.python.org/project/gunicorn/)
